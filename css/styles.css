@@ -1,0 +1,280 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body,
+html {
+    height: 100%;
+    background-color: #ecd8e9;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ///////////////////////////////////// HEADER /////////////////////// */
+.header {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    background-color: rgb(206, 184, 228);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: black;
+
+}
+
+.header-logo-viola {
+    color: rgb(212, 0, 255);
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-nav-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav-link {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: rgb(94, 84, 84);
+}
+
+.header-nav-link:hover {
+    color: red;
+}
+
+/* ///////////////////////////////////// END OF HEADER /////////////////////// */
+
+/* ///////////////////////////////////// MAIN ///////////////////////////////// */
+
+.main {
+    flex: 1 1 auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: rgb(94, 84, 84);
+    margin: 0 auto;
+}
+
+.about-us-2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: rgb(94, 84, 84);
+    margin-bottom: -10px;
+}
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+}
+
+.about-cont {
+    display: flex;
+    flex-basis: 100px;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.about-link {
+    text-decoration: none;
+
+}
+
+.about-text-1 {
+    margin-top: 7px;
+    display: flex;
+    justify-content: left;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+}
+
+.about-text-2 {
+    margin-left: 20px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+}
+
+
+/* .about-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+} */
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid black;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+/* ///////////////////////////////////// END OF MAIN /////////////////////// */
+
+
+/* ///////////////////////////////////// FOoTER ///////////////////////////////// */
+.footer {
+    background-color: rgb(183, 114, 187);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ///////////////////////////////////// END of FOoTER ///////////////////////////////// */
